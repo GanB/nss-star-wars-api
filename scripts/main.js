@@ -1,9 +1,9 @@
-import {fetchLuke} from "./starWarsData.js"
+import { fetchLuke, geStarships } from "./starWarsData.js";
 
 const displayLuke = async () => {
-  const data = await fetchLuke()
-  renderLukeToDOM(data)
-}
+  const data = await fetchLuke();
+  renderLukeToDOM(data);
+};
 
 const renderLukeToDOM = (data) => {
   let html = `
@@ -13,9 +13,9 @@ const renderLukeToDOM = (data) => {
         <p>height: ${data.height}</p>
       </section>
     </article>
-  `
-  document.getElementById('app').innerHTML = html
-}
+  `;
+  document.getElementById("app").innerHTML = html;
+};
 
-displayLuke()
-
+displayLuke();
+geStarships();
